@@ -1,25 +1,20 @@
 {
-  "name": "va02-qa-cypress-bdd-entrega",
+  "name": "va02-qa-bdd-cypress",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Projeto VA02 de QA - Automação BDD com Cypress + Cucumber + Gherkin - Portal da Transparência Gov.br",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:feature": "cypress run --spec 'cypress/e2e/features/**/*.feature'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ManewJ/va02-qa-cypress-bdd-entrega.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ManewJ/va02-qa-cypress-bdd-entrega/issues"
-  },
-  "homepage": "https://github.com/ManewJ/va02-qa-cypress-bdd-entrega#readme",
-  "description": "",
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
-    "cypress": "^15.16.0"
+    "cypress": "^13.6.0",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "esbuild": "^0.20.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/e2e/steps/**/*.js"
   }
 }
